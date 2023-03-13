@@ -2,7 +2,7 @@ name: Report remaining open issues
 on: 
   schedule: 
     # Daily at 8:20 UTC
-    - cron: '20 8 * * *'
+    - cron: '52 * * * *'
 jobs:
   track_pr:
     runs-on: ubuntu-latest
