@@ -27,6 +27,9 @@ jobs:
 
     - name: Build with Gradle
       run: ./gradlew build
+      
+    - name: Set package version
+      run: echo "::set-env name=PKG_VERSION::${{ env.MAIN_VER }}.${{ github.run_number }}.$(date +"%y%m%d")"
 
     - name: git ls-remote
       run: "git ls-remote -h -t https://${{ secrets.access-private-repos }}@github.com/rumburakgit/gitjenkinsdemo1.git"
