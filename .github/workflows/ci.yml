@@ -28,6 +28,10 @@ jobs:
     - name: Build with Gradle
       run: ./gradlew build
 
+    - name: git ls-remote
+      run: "git ls-remote -h -t https://${{ secrets.access-private-repos }}@github.com/rumburakgit/gitjenkinsdemo1.git"
+      shell: bash
+
     - name: Build and Push Docker Image DUPA
       uses: docker/login-action@v1
       with:
