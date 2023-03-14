@@ -13,5 +13,5 @@ jobs:
     - name: Checkout private tools
       uses: actions/checkout@v3
       with:
-       repository: rumburakgit/gitjenkinsdemo1/tree/3.3.33
+       repository: rumburakgit/gitjenkinsdemo1
        token: ${{ secrets.access-private-repos }}
