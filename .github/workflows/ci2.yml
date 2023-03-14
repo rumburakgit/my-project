@@ -1,4 +1,4 @@
-name: Report remaining open issues
+name: Access to private repo!!!
 on:
   push:
     branches: [ master ]
