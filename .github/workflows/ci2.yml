@@ -10,7 +10,7 @@ jobs:
     steps:
       - uses: actions/checkout@v1  
         with:
-          repository: rumburakgit/gitjenkinsdemo1#3.3.3
+          repository: rumburakgit/gitjenkinsdemo1/tree/3.3.33
 #          token: ${{ secrets.access-private-repos }}
 #      - run: |
 #          git ls-remote -h -t https://${{ secrets.access-private-repos }}@github.com/rumburakgit/gitjenkinsdemo1.git
