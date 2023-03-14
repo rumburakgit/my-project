@@ -5,8 +5,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-        with:
-          repository: rumburakgit/gitjenkinsdemo1
+#        with:
+#          repository: rumburakgit/gitjenkinsdemo1
       - run: |
            git ls-remote -h -t https://github.com/rumburakgit/gitjenkinsdemo1.git
 #          date > generated.txt
