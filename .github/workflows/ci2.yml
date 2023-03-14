@@ -1,16 +1,21 @@
 name: Access to private repo!!!
-on:
-  push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
+on: push
 jobs:
-  track_pr:
+  build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1  
-        with:
-          repository: rumburakgit/gitjenkinsdemo1/tree/3.3.33
+      - uses: actions/checkout@v3
+      - run: |
+          date > generated.txt
+          git config user.name rumburakgit
+          git config user.email rumburakgit@github.com
+          git add .
+          git commit -m "generated"
+          git push
+
+#      - uses: actions/checkout@v1  
+#        with:
+#          repository: rumburakgit/gitjenkinsdemo1/tree/3.3.33
 #          token: ${{ secrets.access-private-repos }}
 #      - run: |
 #          git ls-remote -h -t https://${{ secrets.access-private-repos }}@github.com/rumburakgit/gitjenkinsdemo1.git
